@@ -5,7 +5,8 @@ project('gstreamer-full', 'c',
                      # Needed due to https://github.com/mesonbuild/meson/issues/1889,
                      # but this can cause problems in the future. Remove it
                      # when it's no longer necessary.
-                     'cpp_std=c++14'])
+                     'cpp_std=c++14',
+                     'prefix=/usr/local/src/GStreamer/bin'])
 
 apiversion = '1.0'
 gst_version = '>= @0@'.format(meson.project_version())

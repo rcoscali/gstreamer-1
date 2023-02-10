@@ -48,6 +48,7 @@ option('tcp', type : 'feature', value : 'auto')
 option('typefind', type : 'feature', value : 'auto')
 option('videoconvertscale', type : 'feature', value : 'auto')
 option('videorate', type : 'feature', value : 'auto')
+option('discret11', type : 'feature', value : 'auto')
 option('videotestsrc', type : 'feature', value : 'auto')
 option('volume', type : 'feature', value : 'auto')
 
