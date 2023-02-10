@@ -1202,8 +1202,10 @@ gst_discret11_video_parse_update_info (GstDiscret11VideoParseConfig * config)
     gint stride = GST_VIDEO_INFO_PLANE_STRIDE (info, last_plane);
     gint x_tiles = GST_VIDEO_TILE_X_TILES (stride);
     gint y_tiles = GST_VIDEO_TILE_Y_TILES (stride);
-    gint tile_width = 1 << GST_VIDEO_FORMAT_INFO_TILE_WS (info->finfo);
-    gint tile_height = 1 << GST_VIDEO_FORMAT_INFO_TILE_HS (info->finfo);
+    gint tile_width =
+        1 << GST_VIDEO_FORMAT_INFO_TILE_WIDTH (info->finfo, last_plane);
+    gint tile_height =
+        1 << GST_VIDEO_FORMAT_INFO_TILE_HEIGHT (info->finfo, last_plane);
     last_plane_size = x_tiles * y_tiles * tile_width * tile_height;
   } else {
     gint comp[GST_VIDEO_MAX_COMPONENTS];
