@@ -56,3 +56,7 @@ subprojects/*/
 !subprojects/win-flex-bison-binaries
 !subprojects/win-nasm
 !subprojects/packagefiles
+
+subprojects/gi-docgen.wrap
+
+subprojects/gperf.wrap
